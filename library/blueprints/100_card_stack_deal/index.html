@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mako Blueprint 001 v2 — Card Preview / Detail</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="lab">
+    <header class="lab__header">
+      <div>
+        <p class="eyebrow">MAKO MOTION BLUEPRINT 001 · V2</p>
+        <h1>Card Stack / Preview → Detail</h1>
+      </div>
+      <div class="header-actions"><div class="status" id="status"></div><button id="reset">RESET</button><button id="autoDemo">AUTO DEMO</button></div>
+    </header>
+
+    <section class="stage">
+      <div class="stack-zone">
+        <div class="zone-label">ACTIVE STACK</div>
+        <div class="stack" id="stack"></div>
+      </div>
+
+      <div class="sleep-zone" id="sleepZone">
+        <div class="zone-label">SLEEPING FIELD</div>
+        <div class="sleep-hint">Drag the active card here</div>
+        <div class="sleep-cards" id="sleepCards"></div>
+      </div>
+    </section>
+
+    <footer class="instructions">
+      Card = preview space · Click front card → preview components expand into detail space · Click again → each returns to its preview position · Drag → sleeping field
+    </footer>
+  </main>
+
+  <script src="../../../vendor/gsap/gsap.min.js"></script>
+  <script src="../../../vendor/gsap/Draggable.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

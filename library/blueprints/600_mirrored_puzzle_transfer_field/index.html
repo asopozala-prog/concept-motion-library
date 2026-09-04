@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>600 — Mirrored Puzzle Transfer Field</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <div class="eyebrow">FUNDAMENTAL MOTION 600</div>
+    <h1>Mirrored Puzzle Transfer Field</h1>
+  </div>
+  <div class="controls">
+    <button id="reset">RESET</button><button id="autoDemo">AUTO DEMO</button>
+    <button id="whiteFull">WHITE FULL</button>
+    <button id="blackFull">BLACK FULL</button>
+    <button id="scatter">SCATTER 3D</button>
+  </div>
+</header>
+
+<section id="stage">
+  <div class="side-label white-label">WHITE STRUCTURE</div>
+  <div class="side-label black-label">BLACK STRUCTURE</div>
+  <div class="mirror-axis"></div>
+  <div id="whiteGuide" class="puzzle-guide"></div>
+  <div id="blackGuide" class="puzzle-guide"></div>
+  <div id="pieces"></div>
+  <div id="mode">DUAL / TRANSFER</div>
+</section>
+<footer>Click any assembled piece to transfer that persistent piece to its mirrored home.</footer>
+</main>
+<script src="../../..../../../vendor/gsap/gsap.min.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

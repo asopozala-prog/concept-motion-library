@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Card Stack Deal",
+    "category": "blueprints",
+    "relative_path": "blueprints/100_card_stack_deal",
+    "description": "Status:** Blueprint / Experimental",
+    "gif": "100_card_stack_preview_detail_deal.gif"
+  },
+  {
+    "name": "Dynamic Group Field",
+    "category": "blueprints",
+    "relative_path": "blueprints/200_dynamic_group_field",
+    "description": "Status:** Fundamental Motion Blueprint",
+    "gif": "200_dynamic_group_field.gif"
+  },
+  {
+    "name": "Multi Path Process Journey",
+    "category": "blueprints",
+    "relative_path": "blueprints/300_multi_path_process_journey",
+    "description": "Status:** Fundamental Motion Blueprint",
+    "gif": "300_multi_path_process_journey.gif"
+  },
+  {
+    "name": "Growing Symbol Tree",
+    "category": "blueprints",
+    "relative_path": "blueprints/400_growing_symbol_tree",
+    "description": "Status:** Browser-tested Fundamental Motion Blueprint",
+    "gif": "400_growing_symbol_tree.gif"
+  },
+  {
+    "name": "Growing Equal Formation",
+    "category": "blueprints",
+    "relative_path": "blueprints/500_growing_equal_formation",
+    "description": "Status:** Browser-tested Fundamental Motion Blueprint",
+    "gif": "500_growing_equal_formation.gif"
+  },
+  {
+    "name": "Mirrored Puzzle Transfer Field",
+    "category": "blueprints",
+    "relative_path": "blueprints/600_mirrored_puzzle_transfer_field",
+    "description": "",
+    "gif": "600_mirrored_puzzle_transfer_field.gif"
+  },
+  {
+    "name": "Progressive Filter Routing Gates",
+    "category": "blueprints",
+    "relative_path": "blueprints/700_progressive_filter_routing_gates",
+    "description": "Status:** Browser-tested Fundamental Motion Blueprint",
+    "gif": "700_progressive_filter_routing_gates.gif"
+  }
+]

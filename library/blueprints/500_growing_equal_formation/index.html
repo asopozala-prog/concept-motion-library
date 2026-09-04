@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>500 — Growing Equal Formation</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <div class="eyebrow">FUNDAMENTAL MOTION 500</div>
+      <h1>Growing Equal Formation</h1>
+    </div>
+    <div class="controls">
+      <span id="countLabel">1 element</span>
+      <button id="add">+ ADD ELEMENT</button>
+      <button id="reset">RESET</button><button id="autoDemo">AUTO DEMO</button>
+    </div>
+  </header>
+
+  <section id="stage">
+    <svg id="connectors" aria-hidden="true"></svg>
+    <div id="center" aria-label="formation center">◎</div>
+    <div id="elements"></div>
+    <div id="mode">CENTER</div>
+  </section>
+
+  <footer>Each click adds one persistent equal-status element and recomputes the whole formation.</footer>
+</main>
+
+<script src="../../..../../../vendor/gsap/gsap.min.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

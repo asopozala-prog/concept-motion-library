@@ -1,0 +1,175 @@
+* { box-sizing: border-box; }
+
+:root {
+  --card-w: clamp(220px, 26vw, 340px);
+  --card-h: calc(var(--card-w) * 0.62);
+}
+
+html, body { margin: 0; min-height: 100%; }
+
+body {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #f3f3f0;
+  color: #171717;
+}
+
+.lab {
+  min-height: 100vh;
+  padding: 28px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+}
+
+.lab__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+}
+
+.eyebrow, h1, .status, .instructions { margin: 0; }
+.eyebrow { font-size: 11px; letter-spacing: .14em; }
+h1 { margin-top: 5px; font-size: clamp(22px, 3vw, 38px); font-weight: 500; }
+.status { font-size: 12px; text-align: right; }
+
+.stage {
+  position: relative;
+  min-height: 650px;
+  border: 1px solid #171717;
+  overflow: hidden;
+}
+
+.stack-zone { position: absolute; inset: 0 38% 0 0; }
+
+.sleep-zone {
+  position: absolute;
+  right: 4%;
+  top: 12%;
+  width: 28%;
+  height: 76%;
+  border: 1px dashed #777;
+}
+
+.zone-label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.sleep-hint {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+  font-size: 11px;
+  color: #777;
+}
+
+.stack {
+  position: absolute;
+  left: 47%;
+  top: 50%;
+  width: var(--card-w);
+  height: var(--card-h);
+  transform: translate(-50%, -50%);
+  overflow: visible;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #171717;
+  background: #f3f3f0;
+  transform-origin: 50% 50%;
+  user-select: none;
+  touch-action: none;
+}
+
+.card.is-active { cursor: grab; }
+.card.is-dragging { cursor: grabbing; }
+
+.card__label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 11px;
+  z-index: 3;
+}
+
+.component {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  margin: -19px 0 0 -19px;
+  border: 1px solid #171717;
+  background: #f3f3f0;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  z-index: 4;
+}
+
+/* Five distinct preview anchors inside every card. */
+.component[data-component="0"] { left: 25%; top: 48%; }
+.component[data-component="1"] { left: 50%; top: 48%; }
+.component[data-component="2"] { left: 75%; top: 48%; }
+.component[data-component="3"] { left: 37.5%; top: 76%; }
+.component[data-component="4"] { left: 62.5%; top: 76%; }
+
+.component::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 6px);
+  width: 24px;
+  height: 1px;
+  background: #171717;
+  transform: translateX(-50%);
+  opacity: .25;
+}
+
+.card:not(.is-active) .component {
+  transform: scale(.82);
+}
+
+.sleep-cards { position: absolute; inset: 42px 18px 18px; }
+
+.sleeping-card {
+  position: absolute;
+  width: min(82%, 240px);
+  aspect-ratio: 1.61 / 1;
+  border: 1px solid #171717;
+  background: #f3f3f0;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+}
+
+.instructions { font-size: 11px; line-height: 1.5; }
+
+@media (max-width: 760px) {
+  .lab { padding: 16px; }
+  .lab__header { align-items: start; flex-direction: column; }
+  .status { text-align: left; }
+  .stage { min-height: 700px; }
+  .stack-zone { inset: 0 0 42% 0; }
+  .sleep-zone { left: 8%; right: 8%; top: auto; bottom: 5%; width: auto; height: 31%; }
+  .stack { left: 42%; top: 54%; }
+}
+
+/* TEMP DEBUG — force unmistakable preview positions */
+.card.is-active .component[data-component="0"] { left: 15% !important; top: 35% !important; }
+.card.is-active .component[data-component="1"] { left: 50% !important; top: 35% !important; }
+.card.is-active .component[data-component="2"] { left: 85% !important; top: 35% !important; }
+.card.is-active .component[data-component="3"] { left: 30% !important; top: 78% !important; }
+.card.is-active .component[data-component="4"] { left: 70% !important; top: 78% !important; }
+
+.header-actions{display:flex;align-items:center;gap:10px}
+#reset{border:1px solid #777;background:#f3f3f0;border-radius:999px;padding:9px 14px;font:700 11px/1 inherit;letter-spacing:.08em;cursor:pointer}
+
+#autoDemo.is-running{outline:2px solid currentColor;outline-offset:2px}

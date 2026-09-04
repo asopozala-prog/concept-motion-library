@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>300 — Multi-Path Process Journey</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="lab">
+    <header>
+      <div>
+        <div class="eyebrow">FUNDAMENTAL MOTION 300</div>
+        <h1>Same origin. Different journey. Same destination.</h1>
+      </div>
+      <div class="header-actions"><div id="status">Click a journey</div><button id="reset">RESET</button><button id="autoDemo">AUTO DEMO</button></div>
+    </header>
+
+    <section class="stage" id="stage">
+      <svg id="paths" aria-hidden="true"></svg>
+
+      <button class="anchor start" id="start" aria-label="Shared start">
+        <span>START</span>
+      </button>
+      <button class="anchor end" id="end" aria-label="Shared end">
+        <span>END</span>
+      </button>
+
+      <div id="stationLayer"></div>
+      <div id="traveler" aria-hidden="true"><span>●</span></div>
+      <aside id="stationNote" class="station-note"></aside>
+
+      <aside class="evaluation">
+        <div class="evaluation-label">EVALUATION CENTER</div>
+        <div id="evaluationBody">
+          <strong>No journey evaluated</strong>
+          <p>Select one of the three paths.</p>
+        </div>
+      </aside>
+
+      <div class="journey-hit" data-journey="a" aria-label="Run journey A"></div>
+      <div class="journey-hit" data-journey="b" aria-label="Run journey B"></div>
+      <div class="journey-hit" data-journey="c" aria-label="Run journey C"></div>
+    </section>
+
+    <footer>Click directly on any journey curve to run it.</footer>
+  </main>
+
+  <script src="../../..../../../vendor/gsap/gsap.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
